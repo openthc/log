@@ -6,6 +6,14 @@
 * Display Metrics in real-time
 
 
+## Dependencies
+
+* Grafana
+* Prometheus
+* Nagios
+* Zabbix
+
+
 ## Install
 
 Clone this repo into some place special.
@@ -14,7 +22,22 @@ Then install the `edoceo/gwsrps` tool.
 Run it, using `./bin/gwsrps.sh` as an example wrapper.
 
 
-### Redis via stunnel
+### Grafana
 
-Check out `./etc/stunnel-redis.conf`.
-Typically, we make stunnel listen on the same port as local Redis.
+Protected via *Basic* auth using a reverse-proxy.
+Could also use [this oAuth](https://github.com/nbayramberdiyev/grafana-generic-oauth) client might work.
+
+
+### Prometheus
+
+Protected via *Basic* auth, using a reverse-proxy.
+
+
+### Nagios
+
+Optional
+
+
+### Zabbix
+
+Optional
